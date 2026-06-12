@@ -1,7 +1,9 @@
 <p align="center">
   <img src="IMG_0470.png" alt="Profile Image" width="400"/>
 </p>
-# 🔥 Eventlit
+
+🔥 Eventlit
+
 ![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
 ![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?logo=typescript&logoColor=white)
 ![Next.js](https://img.shields.io/badge/Next.js-000000?logo=next.js&logoColor=white)
