@@ -1,3 +1,11 @@
+name: Eventlit Smart Contract Security Scan
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
 jobs:
   analyze-contracts:
     runs-on: ubuntu-latest
@@ -15,6 +23,5 @@ jobs:
           pip install slither-analyzer
           npm install -g @solidity-parser/parser
 
-      # Fix: Shifted these two lines to the left so they start a new step
       - name: Run Static Code Exploit Analyzer
         run: slither packages/contracts/
