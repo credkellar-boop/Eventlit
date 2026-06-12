@@ -1,0 +1,27 @@
+name: Eventlit Smart Contract Security Scan
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  analyze-contracts:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository Blueprint
+        uses: actions/checkout@v4
+
+      - name: Set up Python Runtime Environment
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+
+      - name: Install Slither Analyzer
+        run: |
+          pip install slither-analyzer
+          npm install -g @solidity-parser/parser
+
+      - name: Run Static Code Exploit Analysis
+        run: slither packages/contracts/ --solc-args "--optimize"
