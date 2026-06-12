@@ -24,5 +24,4 @@ jobs:
           npm install -g @solidity-parser/parser
 
       - name: Run Static Code Exploit Analysis
-        run: |
-          slither packages/contracts/ --solc-args "--optimize"
+        run: slither packages/contracts/ --solc-args --optimize
