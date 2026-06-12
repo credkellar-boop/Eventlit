@@ -23,5 +23,6 @@ jobs:
           pip install slither-analyzer
           npm install -g @solidity-parser/parser
 
-      - name: Run Static Code Exploit Analysis
-        run: slither packages/contracts/ --solc-args --optimize
+            - name: Run Static Code Exploit Analysis
+        run: slither packages/contracts/
+
