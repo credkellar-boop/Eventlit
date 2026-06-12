@@ -40,10 +40,6 @@ Serving as a practical, consumer-facing implementation of high-frequency archite
 
 ---
 
-## 📂 Perfect Project Structure
-
-The monorepo is structured using PNPM Workspaces and Turborepo, distinctly separating public-facing applications from internal high-frequency microservices and shared libraries:
-
 ```text
 Eventlit/
 ├── apps/
