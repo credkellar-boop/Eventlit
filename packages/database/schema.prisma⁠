@@ -1,0 +1,60 @@
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model User {
+  id        String   @id @default(uuid())
+  email     String   @unique
+  name      String?
+  walletAdd String?  @unique // For Web3 ticket gating
+  orders    Order[]
+  events    Event[]  // Organizer relationship
+  createdAt DateTime @default(now())
+}
+
+model Event {
+  id          String       @id @default(uuid())
+  title       String
+  description String
+  location    String
+  startTime   DateTime
+  organizerId String
+  organizer   User         @relation(fields: [organizerId], references: [id])
+  ticketTiers TicketTier[]
+  orders      Order[]
+  createdAt   DateTime     @default(now())
+}
+
+model TicketTier {
+  id          String   @id @default(uuid())
+  eventId     String
+  event       Event    @relation(fields: [eventId], references: [id])
+  name        String   // e.g., "Early Bird", "VIP"
+  price       Int      // Stored in cents (e.g., $20.00 = 2000)
+  capacity    Int
+  reserved    Int      @default(0) // Tracks current lock/holding counter
+  sold        Int      @default(0)
+}
+
+model Order {
+  id          String      @id @default(uuid())
+  eventId     String
+  event       Event       @relation(fields: [eventId], references: [id])
+  userId      String
+  user        User        @relation(fields: [userId], references: [id])
+  status      OrderStatus @default(PENDING)
+  totalAmount Int
+  createdAt   DateTime    @default(now())
+}
+
+enum OrderStatus {
+  PENDING
+  COMPLETED
+  FAILED
+  EXPIRED
+}
