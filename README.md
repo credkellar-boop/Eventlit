@@ -1,3 +1,6 @@
+<p align="center">
+  <img src="IMG_0470.png" alt="Profile Image" width="400"/>
+</p>
 # 🔥 Eventlit
 ![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
 ![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?logo=typescript&logoColor=white)
