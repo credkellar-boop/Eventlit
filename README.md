@@ -1,13 +1,4 @@
 # 🔥 Eventlit
-
-An integrated event management and ticketing platform designed for massive scale. 
-
-Serving as a practical, consumer-facing implementation of high-frequency architectures, Eventlit adapts the real-time alerting mechanisms engineered in Cryptocurrency-Notification and couples them with the raw, 10,000 TPS execution throughput of Monad-HFT-Node. The result is a ticketing engine capable of surviving massive flash drops without breaking a sweat.
-
----
-
-### 🏷️ Repository Status & Frameworks
-
 ![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
 ![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?logo=typescript&logoColor=white)
 ![Next.js](https://img.shields.io/badge/Next.js-000000?logo=next.js&logoColor=white)
@@ -17,6 +8,10 @@ Serving as a practical, consumer-facing implementation of high-frequency archite
 ![Gemini AI](https://img.shields.io/badge/AI_Engine-Gemini_Pro-4285F4?logo=google)
 [![Smart Contract Security Scan](https://github.com/credkellar-boop/Eventlit/actions/workflows/security-scan.yml/badge.svg)](https://github.com/credkellar-boop/Eventlit/actions/workflows/security-scan.yml)
 ![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)
+
+An integrated event management and ticketing platform designed for massive scale. 
+
+Serving as a practical, consumer-facing implementation of high-frequency architectures, Eventlit adapts the real-time alerting mechanisms engineered in Cryptocurrency-Notification and couples them with the raw, 10,000 TPS execution throughput of Monad-HFT-Node. The result is a ticketing engine capable of surviving massive flash drops without breaking a sweat.
 
 ---
 
